@@ -1,11 +1,11 @@
-name: template
+name: vesta
 version: 0.1.0
 
-# authors:
-#   - name <email@example.com>
+authors:
+  - Rui Vieira <ruidevieira@googlemail.com>
 
-# description: |
-#   Short description of template
+description: |
+  Crystal executable Markdown
 
 # dependencies:
 #   pg:
@@ -16,4 +16,4 @@ version: 0.1.0
 #   webmock:
 #     github: manastech/webmock.cr
 
-# license: MIT
+license: AGPL3
