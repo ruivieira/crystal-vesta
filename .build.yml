@@ -3,12 +3,12 @@ packages:
   - curl
   - unzip
 sources:
-  - https://git.sr.ht/~ruivieira/crystal-template
+  - https://git.sr.ht/~ruivieira/crystal-vesta
 tasks:
   - setup: |
       curl -fsSL https://crystal-lang.org/install.sh | sudo bash
   - test: |
-      cd crystal-template
+      cd crystal-vesta
       shards install
       crystal spec
       crystal spec
