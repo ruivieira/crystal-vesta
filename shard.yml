@@ -7,13 +7,11 @@ authors:
 description: |
   Crystal executable Markdown
 
-# dependencies:
-#   pg:
-#     github: will/crystal-pg
-#     version: "~> 0.5"
-
-# development_dependencies:
-#   webmock:
-#     github: manastech/webmock.cr
+dependencies:
+  cmark:
+    github: amauryt/cr-cmark-gfm
+  icr:
+    github: crystal-community/icr
+    branch: master
 
 license: AGPL3

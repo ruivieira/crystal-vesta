@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="crystal_docs.project_version" content="rui-58-dev">
+<meta name="crystal_docs.project_name" content="vesta">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="vesta">
+  <title>vesta rui-58-dev</title>
+  <script type="text/javascript">
+  CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          vesta
+        </a>
+      </h1>
+
+      <span class="project-version">
+        rui-58-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="vesta/Vesta" data-name="vesta">
+      <a href="Vesta.html">Vesta</a>
+      
+        <ul>
+  
+  <li class=" " data-id="vesta/Vesta/Renderer" data-name="vesta::renderer">
+      <a href="Vesta/Renderer.html">Renderer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<p><a href="https://github.com/ruivieira/crystal-vesta/actions/workflows/main.yml"><img src="https://github.com/ruivieira/crystal-vesta/actions/workflows/main.yml/badge.svg" alt="tests"/></a> <a href="https://builds.sr.ht/~ruivieira/crystal-vesta/commits/.build.yml?"><img src="https://builds.sr.ht/~ruivieira/crystal-vesta/commits/.build.yml.svg" alt="builds.sr.ht status"/></a></p>
+
+<h1><a id="crystal-vesta" class="anchor" href="#crystal-vesta">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>crystal-vesta</h1>
+
+<p>Crystal executable Markdown.</p>
+
+<h2><a id="installation" class="anchor" href="#installation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>installation</h2>
+
+<p>Add the dependency to your <code>shard.yml</code>:</p>
+
+<pre><code class="language-yaml">dependencies:
+  holst:
+    github: ruivieira/crystal-vesta</code></pre>
+
+<p>and run <code>shards install</code>.</p>
+
+<h2><a id="examples" class="anchor" href="#examples">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>examples</h2>
+
+<p>Given a Markdown file with <code>crystal</code> code block, <em>e.g.</em></p>
+
+<pre><code class="language-crystal"># Title
+
+This is a test, and with
+a code block (`Crystal`)
+
+```crystal
+a = [1, 2, 3]
+b = a.map{ |x| x*2 }
+b
+```
+
+Let's try with another one
+
+```crystal
+c = 4
+c
+```
+
+And ... the end.</code></pre>
+
+<p><code>vesta</code> will execute the code block and add the result after the block:</p>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;vesta&quot;</span>
+
+vesta <span class="o">=</span> <span class="t">Vesta</span><span class="t">::</span><span class="t">Renderer</span>.<span class="k">new</span>(<span class="s">&quot;test_file.md&quot;</span>)
+result <span class="o">=</span> vesta.render</code></pre>
+
+<p>will result in:</p>
+
+<pre><code class="language-crystal"># Title
+
+This is a test, and with a code block (`Crystal`)
+
+``` crystal
+a = [1, 2, 3]
+b = a.map{ |x| x*2 }
+b
+```
+
+    [2, 4, 6]
+
+Let's try with another one
+
+``` crystal
+c = 4
+c
+```
+
+```
+4
+```
+
+And ... the end.</code></pre>
+
+<h2><a id="documentation" class="anchor" href="#documentation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>documentation</h2>
+
+<p>API documentation is available <a href="https://ruivieira.github.io/crystal-vesta/">here</a>.</p>
+
+<p>A git mirror is available at <a href="https://git.sr.ht/~ruivieira/crystal-vesta">https://git.sr.ht/~ruivieira/crystal-vesta</a>.</p>
+
+<h2><a id="mailing-lists" class="anchor" href="#mailing-lists">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>mailing lists</h2>
+
+<ul><li>Announcements: <a href="https://lists.sr.ht/~ruivieira/crystal-announce">https://lists.sr.ht/~ruivieira/crystal-announce</a></li><li>Discussion: <a href="https://lists.sr.ht/~ruivieira/crystal-discuss">https://lists.sr.ht/~ruivieira/crystal-discuss</a></li><li>Development: <a href="https://lists.sr.ht/~ruivieira/crystal-devel">https://lists.sr.ht/~ruivieira/crystal-devel</a></li></ul>
+</div>
+</body>
+</html>

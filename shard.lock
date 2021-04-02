@@ -1,0 +1,14 @@
+version: 2.0
+shards:
+  cmark:
+    git: https://github.com/amauryt/cr-cmark-gfm.git
+    version: 0.1.0+git.commit.3d941a0cbae64acbc0d9085e0182e89af7221bf5
+
+  icr:
+    git: https://github.com/crystal-community/icr.git
+    version: 0.8.0+git.commit.b6b335f40aff4c2c07d21250949935e8259f7d1b
+
+  readline:
+    git: https://github.com/crystal-lang/crystal-readline.git
+    version: 0.1.0+git.commit.0fb7d186da8e1b157998d98d1c96e99699b791eb
+
