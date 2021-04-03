@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Crystal Docs 0.36.1">
-<meta name="crystal_docs.project_version" content="rui-58-dev">
+<meta name="crystal_docs.project_version" content="0.2.0">
 <meta name="crystal_docs.project_name" content="vesta">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="vesta">
-  <title>Vesta::Renderer - vesta rui-58-dev</title>
+  <title>Vesta::Renderer - vesta 0.2.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        rui-58-dev
+        0.2.0
       </span>
     </div>
   </div>
@@ -108,7 +108,9 @@
   </h2>
   
     
-      vesta.cr
+      <a href="https://github.com/ruivieira/crystal-vesta/blob/v0.2.0/src/vesta.cr#L7" target="_blank">
+        vesta.cr
+      </a>
     
     <br/>
   
@@ -128,7 +130,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(file_path:String)-class-method" class="signature"><strong>.new</strong>(file_path : String)</a>
+        <a href="#new(file_path:String,image_dest:String=&quot;images&quot;,image_prefix:String=&quot;image&quot;)-class-method" class="signature"><strong>.new</strong>(file_path : String, image_dest : String = <span class="s">&quot;images&quot;</span>, image_prefix : String = <span class="s">&quot;image&quot;</span>)</a>
         
       </li>
     
@@ -149,6 +151,11 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#is_png?(data:String)-instance-method" class="signature"><strong>#is_png?</strong>(data : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#options:Cmark::Option-instance-method" class="signature"><strong>#options</strong> : Cmark::Option</a>
         
       </li>
@@ -160,6 +167,11 @@
     
       <li class="entry-summary">
         <a href="#render:String-instance-method" class="signature"><strong>#render</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#save_png_data(image_path:String,data:String)-instance-method" class="signature"><strong>#save_png_data</strong>(image_path : String, data : String)</a>
         
       </li>
     
@@ -203,16 +215,18 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(file_path:String)-class-method">
+    <div class="entry-detail" id="new(file_path:String,image_dest:String=&quot;images&quot;,image_prefix:String=&quot;image&quot;)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(file_path : String)
+        def self.<strong>new</strong>(file_path : String, image_dest : String = <span class="s">&quot;images&quot;</span>, image_prefix : String = <span class="s">&quot;image&quot;</span>)
 
-        <a class="method-permalink" href="#new(file_path:String)-class-method">#</a>
+        <a class="method-permalink" href="#new(file_path:String,image_dest:String=&quot;images&quot;,image_prefix:String=&quot;image&quot;)-class-method">#</a>
       </div>
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/ruivieira/crystal-vesta/blob/v0.2.0/src/vesta.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -231,6 +245,22 @@
     Instance Method Detail
   </h2>
   
+    <div class="entry-detail" id="is_png?(data:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>is_png?</strong>(data : String)
+
+        <a class="method-permalink" href="#is_png?(data:String)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ruivieira/crystal-vesta/blob/v0.2.0/src/vesta.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="options:Cmark::Option-instance-method">
       <div class="signature">
         
@@ -241,6 +271,8 @@
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/ruivieira/crystal-vesta/blob/v0.2.0/src/vesta.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -256,6 +288,8 @@
       <br/>
       <div>
         
+          [<a href="https://github.com/ruivieira/crystal-vesta/blob/v0.2.0/src/vesta.cr#L8" target="_blank">View source</a>]
+        
       </div>
     </div>
   
@@ -269,6 +303,24 @@
       
       <br/>
       <div>
+        
+          [<a href="https://github.com/ruivieira/crystal-vesta/blob/v0.2.0/src/vesta.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="save_png_data(image_path:String,data:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>save_png_data</strong>(image_path : String, data : String)
+
+        <a class="method-permalink" href="#save_png_data(image_path:String,data:String)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ruivieira/crystal-vesta/blob/v0.2.0/src/vesta.cr#L45" target="_blank">View source</a>]
         
       </div>
     </div>
