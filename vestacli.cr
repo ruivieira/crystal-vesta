@@ -17,7 +17,8 @@ OptionParser.parse do |parser|
 end
 
 if input && output
-  renderer = Vesta::Renderer.new(input.to_s)
+  source = File.read(input.to_s)
+  renderer = Vesta::Renderer.new(source)
   markdown = renderer.render
   File.write(output.to_s, markdown)
 end
