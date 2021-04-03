@@ -8,8 +8,8 @@ module Vesta
     property options : Cmark::Option
 
     def initialize(@file_path : String, @image_dest : String = "images", @image_prefix : String = "image")
-      @options = Cmark::Option.flags(Nobreaks, ValidateUTF8) # deafult is Option::None
-      extensions = Cmark::Extension.flags(Table, Tasklist)   # default is Extension::None
+      @options = Cmark::Option.flags(Nobreaks, ValidateUTF8)
+      extensions = Cmark::Extension.flags(Table, Tasklist)
       @image_counter = 1
 
       @md = File.read(file_path)
@@ -44,6 +44,9 @@ module Vesta
 
     def save_png_data(image_path : String, data : String)
       command = Icr::CommandStack.new
+      if !Dir.exists?(@image_dest)
+        Dir.mkdir(@image_dest)
+      end
       command.push "File.write(\"#{image_path}\", " + data + ")"
       @image_counter += 1
       executer = Icr::Executer.new command

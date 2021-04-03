@@ -56,3 +56,4 @@ build-iPhoneSimulator/
 # .rubocop-https?--*
 lib
 .DS_Store
+.chglog
