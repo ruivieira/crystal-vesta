@@ -18,6 +18,20 @@ dependencies:
 
 and run `shards install`.
 
+### command line
+
+To install the CLI, clone this repository and run
+
+```shell
+crystal build vestacli.cr
+```
+
+The basic usage to render a markdown file `foo.md` is
+
+```shell
+vestacli -i foo.md -o bar.md
+```
+
 ## examples
 
 Given a Markdown file with `crystal` code block, _e.g._
